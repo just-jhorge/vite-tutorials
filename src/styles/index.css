@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Kumbh Sans", Tahoma, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+@layer components {
+    header {
+        @apply w-[90%] mx-auto py-3 flex justify-between items-center md:border-b-2 md:border-gray-200;
+    }
+
+    .addCart {
+        @apply flex justify-center gap-5 place-items-center bg-orange-500 hover:bg-orange-200 w-full lg:w-7/12 py-4 rounded-xl drop-shadow-2xl;
+    }
+
+    .afterLink {
+        @apply relative after:content-[''] after:block after:h-[5px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full after:absolute;
+    }
+
+    .cartDiv {
+        @apply absolute top-[90px] right-[20px] lg:right-[0px] bg-white rounded-2xl drop-shadow-2xl w-[90%] mx-auto md:w-[380px] flex flex-col z-50;
+    }
+
+    .checkoutBtn {
+        @apply flex justify-center gap-5 place-items-center bg-[#ff7d1a] w-[90%] py-3 rounded-xl text-lg text-white font-bold;
+    }
+
+    .hero {
+        @apply md:p-7 lg:p-10 gap-x-7 flex flex-col md:flex-row md:items-center justify-between;
+    }
+
+    .heroTextBtn {
+        @apply flex justify-around items-center px-3 py-3 lg:px-1 rounded-xl bg-gray-50 w-full mb-5 lg:mb-0 lg:w-4/12 font-extrabold text-xl;
+    }
+
+    .imagesMobileBtn {
+        @apply bg-white h-10 w-10 hover:text-[#ff7d1a] font-black text-2xl grid place-items-center rounded-full absolute lg:hidden top-[45%];
+    }
+
+    .lightboxBtn {
+        @apply bg-white h-14 w-14 font-black text-4xl hover:text-[#ff7d1a] grid place-items-center rounded-full absolute;
+    }
+
+    .mobileNav {
+        @apply fixed top-0 flex flex-col gap-y-8 p-8 h-screen font-extrabold text-xl bg-white z-40 duration-1000 lg:hidden;
+    }
+}
